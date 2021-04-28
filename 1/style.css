@@ -1,0 +1,424 @@
+/* New rules for ex 8 (form) */
+form {
+    margin:3%;
+}
+fieldset {
+    border-radius: 10px;
+    background:#c6ebce;
+    margin-top: 10px;
+}
+legend {
+    border:solid #222923;
+    border-radius: 10px;
+    font-size:17px;
+    letter-spacing: 0.9px;
+    font-weight: bold;
+    color:#090f0a;
+    background:#ddf0ed;
+    padding:2% 5%;
+}
+label {
+    color:#080a08;
+    font-size:15px;
+    letter-spacing: 0.9px;
+    padding:3%;
+    width:auto;
+}
+div label {
+    padding:0;
+}
+label[for="show_pass"] {
+    font-size:13px;
+    padding:0;
+}
+input:not([type="radio"]):not([type="checkbox"]), select {
+    border:solid #090f0a 1px;
+    border-radius: 10px;
+    width:100%;
+    height: 30px;
+    background:#e8ffed ;
+}
+input:not([type="radio"]):not([type="checkbox"]):invalid {
+    border: solid rgb(168, 0, 0) 1px;
+    box-shadow: 0px 3px 8px 0px rgb(168, 0, 0);
+}
+textarea {
+    width:100%;
+    height:80px;
+    resize:none;
+    background:#e8ffed;
+    border:solid #222923 1px;
+    border-radius: 10px;
+}
+fieldset h2 {
+    font-size:18px;
+    padding-left:2%;
+}
+.radioquestion legend , .checkquestion legend{
+    border:solid #222923 1px;
+    font-size:16px;
+    font-weight: normal;
+}
+label.required {
+    color:rgb(168, 0, 0);
+}
+label.required::after {
+    color:rgb(168, 0, 0);
+    content:" * Υποχρεωτικό!";
+    font-size:9px;
+    font-weight: bold;
+}
+details{
+    font-size: 12px;
+}
+
+
+/* New rules for ex 7*/
+#change_theme, #showhiddentext {
+    min-height:30px;
+    color:#29332b;
+    background: #c6e6c7;
+    padding:2% 0%;
+    border: solid #29332b;
+    font-size:15px;
+}
+#showhiddentext {
+    width:100%;
+    margin-bottom:5%;
+}
+#change_theme:hover, #showhiddentext:hover{
+    background: #86ad8c;
+}
+#hiddentext {
+    display:none;
+}
+#text-of-the-day {
+    font-size:13px;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_R-W4Ep0.woff2) format('woff2');
+}
+
+body {
+    background: #85d3c6 url("images/background_image.png");
+    background-size:cover;
+    font-family: 'Roboto Mono';
+    font-size:15px;
+    word-wrap: break-word;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-gap: 5px;
+}
+
+p {
+    color:#243025;
+}
+
+/* link to ex1 */
+.back-to-ex1 {
+    background:#445348;
+    padding: 10px;
+}
+.back-to-ex1 a {
+    color:#f3f3f3;
+}
+
+/*website header */
+h1{
+    margin:0px;
+    color:#243025;
+    background: #aecfb1;
+    padding: 5%;
+    font-size: 25px;
+}
+.page-header {
+    grid-row: 2;
+    background:#caf1cd;
+    padding: 1%;
+}
+.page-header ul{
+    text-align: center;
+    border-top: solid #617766;
+    padding:0;
+    margin:0;
+}
+.page-header li{
+    width:100%;
+    margin-right:1%;
+    list-style-type: none;
+}
+.page-header li a{
+    text-decoration: none;
+    color:#29332b;
+    padding:2% 0%;
+    display:block;
+    margin:0;
+}
+.page-header li a:hover {
+    background:#86ad8c;
+}
+.page-header li a.active{
+    background:#445348;
+    color:#eafaec;
+}
+
+/*the sides of the website */
+aside h2{
+    font-size: 15px;
+}
+aside {
+    background:#8da58d;
+    padding:0% 5%;
+    color:#243025;
+}
+aside#left{
+    grid-row:3;
+}
+aside#right {
+    grid-row:5;
+}
+aside ul {
+    border-top: solid #243025;
+    padding:0;
+    margin:0;
+}
+aside li {
+    list-style-type: none;
+    padding:3% 0%;
+}
+aside li a{
+    text-decoration: none;
+    color:#090f0a;
+    padding:0;
+    font-weight:500;
+}
+aside li a:hover {
+    color: #d3d3d3;
+}
+
+/*the main content*/
+main {
+    grid-row:4;
+    background:#f4fdf6;
+    padding:0% 3%;
+}
+main header figure {
+    text-align: center;
+}
+main header h2, #text-of-the-day {
+    color:#314434;
+    padding:3%;
+    border-style: solid;
+    border-color: #314434;
+    text-align: center;
+    background:#c6e6c7;
+}
+h2, h3 {
+    font-style: italic;
+    color:#222923;
+    text-decoration:underline;
+}
+.column {
+    margin:3%;
+}
+.column figure {
+    padding:0;
+    margin:0;
+}
+figure img {
+    border-style:solid;
+    border-color:#314434;
+    border-width: thin;
+    background: #ffffff;
+}
+figcaption {
+    color:#29332b;
+    font-style: italic;
+}
+dt {
+    font-weight: bold;
+    font-style: italic;
+}
+dfn , abbr{
+    text-decoration: underline;
+    color:#c53e00;
+}
+blockquote {
+    font-style: italic;
+}
+
+/* the footer of the website*/
+footer {
+    grid-row:6;
+    background:#445348;
+    text-align: center;
+}
+footer p {
+    color:#c7d1c8;
+}
+img {
+    max-width: 100%; /*responsive images*/
+}
+
+/* MEDIA QUERIES */
+
+/*for medium-sized screens (tablets)*/
+@media(min-width: 700px) {
+    /* New rules for ex 8 (form) */
+    fieldset.container {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-between; 
+    }
+    .field {
+        width: 45%;
+    }
+
+    /* Old rules */
+    #text-of-the-day {
+        font-size:15px;
+    }
+
+    body {
+        grid-template-columns: minmax(150px,30%) 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        margin: 0 5%;
+    }
+    /* link to ex1 */
+    .back-to-ex1 {
+        grid-row:1;
+        grid-column:1/3;
+    }
+
+    /*website header*/
+    h1 {
+        font-size: 30px;
+    }
+    .page-header {
+        grid-column:1/3;
+    }
+    .page-header ul {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .page-header li{
+        width:auto;
+        padding:20px 0px;
+    }
+    .page-header li a{
+        display:inline;
+        padding:18px 20px;
+    }
+
+    /*the sides of the website */
+    aside#left{
+        grid-row:3;
+        grid-column:1; 
+    }
+    aside#right {
+        grid-row:4;
+        grid-column:1/3;
+    }
+
+    /*the main content*/
+    main {
+        grid-row:3;
+        grid-column: 2;
+    }
+    
+    /*the footer of the website*/
+    footer {
+        grid-row:5;
+        grid-column: 1/3;
+    }
+}
+
+/*for larger screens (laptop)*/
+@media(min-width: 960px) {
+    body {
+        grid-template-columns: minmax(150px,15%) 1fr minmax(150px,15%);
+        grid-template-rows: auto auto auto auto;
+        margin: 0 5%;
+    }
+    /* link to ex1 */
+    .back-to-ex1 {
+        grid-row:1;
+        grid-column-start:1;
+        grid-column-end:4;
+    }
+
+    /*website header*/
+    .page-header {
+        grid-column:1/4;
+    }
+    h1 {
+        font-size: 33px;
+        padding:4%;
+    }
+
+    /*the sides of the website */
+    aside#left{
+        grid-row:3;
+        grid-column:1; 
+    }
+    aside#right {
+        grid-row:3;
+        grid-column:3;
+    }
+
+    /*the main content*/
+    .container {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .column {
+        margin:3%;
+        min-width:0;
+        width:43%;
+    }
+
+    /*the footer of the website*/
+    footer {
+        grid-row:4;
+        grid-column: 1/4;
+    }
+}
+
+/*for very large screens (desktops)*/
+@media(min-width: 1300px) {
+    #text-of-the-day {
+        font-size:17px;
+    }
+
+    h1 {
+        font-size: 35px;
+        padding:2%;
+    }
+
+    /*the main content*/
+    .column {
+        margin:2%;
+    }
+    main header h2 {
+        padding:2%;
+        font-size: 26px;
+    }
+}

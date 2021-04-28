@@ -1,0 +1,118 @@
+/* Stylesheet to change color theme to pink*/
+/* New rules for ex 8 (form) */
+fieldset {
+    background:#f8ab8f;
+}
+legend {
+    border:solid #974020;
+    background:#ffebe4;
+    color:#35180d;
+}
+input:not([type="radio"]):not([type="checkbox"]),select {
+    border:solid #50200e 1px;
+    background:#ffebe4 ;
+}
+textarea {
+    background:#ffebe4;
+    border:solid #974020 1px;
+}
+.radioquestion legend , .checkquestion legend{
+    border:solid #974020 1px;
+}
+
+
+/* Old rules */
+#change_theme, #showhiddentext {
+    color:#974020;
+    background: #ffebe4;
+    border-color:#974020;
+}
+#change_theme:hover, #showhiddentext:hover{
+    background: #7a3b24;
+    color: #fff9f7;
+}
+
+body {
+    background: #fa8357 url("images/background_image_pink.jpg");
+    background-size:cover;
+}
+p {
+    color:#35180d;
+}
+
+/* link to ex1 */
+.back-to-ex1 {
+    background:#974020;
+    padding: 10px;
+}
+.back-to-ex1 a {
+    color:#ffebe4;
+}
+
+/*website header */
+h1{
+    color:#803318;
+    background: #f8ab8f;
+}
+.page-header {
+    background:#ffc8b4;
+}
+.page-header ul{
+    border-top: solid #fa8357;
+}
+.page-header li a{
+    color:#974020;
+}
+.page-header li a:hover {
+    background:#f8b39a;
+}
+.page-header li a.active{
+    background:#974020;
+    color:#ffebe4;
+}
+
+/*the sides of the website */
+aside {
+    background:#f8b39a;
+    color:#974020;
+}
+aside ul {
+    border-top: solid #974020;
+}
+aside li a{
+    color:#35180d;
+}
+aside li a:hover {
+    color: #ffebe4;
+}
+
+/*the main content*/
+main {
+    background:#ffebe4;
+}
+main header h2, #text-of-the-day {
+    color:#974020;
+    border-color: #974020;
+    background:#ffebe4;
+}
+h2, h3 {
+    color:#35180d;
+}
+figure img {
+    border-color:#974020;
+    background: #ffebe4;
+}
+figcaption {
+    color:#974020;
+}
+dfn , abbr{
+    color:#c21313;
+}
+
+/* the footer of the website*/
+footer {
+    background:#974020;
+}
+footer p {
+    color:#ffebe4;
+}

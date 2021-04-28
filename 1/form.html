@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang = "el">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Konstantina Souvatzidaki, 3170149">
+        <meta name="description" content="a page about mobile networks">
+        <meta name="keywords" content="university,webdev,aueb">
+        <title>Γίνετε Μέλος</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="cyan_theme">
+        <link rel="stylesheet" type="text/css" href="style_pink.css" id="pink_theme" disabled>
+        <script src="functions.js" type="text/javascript"> </script>
+        <script src="form_validation.js" type="text/javascript"> </script>
+    </head>
+    <body> 
+        <nav class="back-to-ex1" title="backtoex1">
+            <a href="../index.html">Πίσω στην Άσκηση 1</a>
+        </nav>
+        <header class="page-header">
+            <h1>Η Ιστορία των Κινητών Επικοινωνιών</h1>
+            <nav>
+                <ul> 
+                    <li><a href="index.html">Αρχική Σελίδα</a></li>
+                    <li><a href="mobile_history.html">Γενιές Κινητής Επικοινωνίας</a></li>
+                    <li><a href="5G.html">Η 5η Γενιά (5G)</a></li>
+                    <li><a class="active" href="form.html">Γίνετε Μέλος</a></li>
+                    <li><button id="change_theme">Cyan Εμφάνιση</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside id="left" title="leftnav">
+            <nav title="sidenav">
+                
+                    <p id="text-of-the-day">Το κείμενο της ημέρας</p>
+                
+            </nav>
+        </aside>
+
+        <aside id="right" title="rightnav">
+            <h2> Links Επικοινωνίας: </h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/konstantina-souvatzidaki-b99717200/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/k-souvatzidaki" target="_blank">GitHub</a></li>
+                <li><a href="https://www.aueb.gr/" target="_blank">Οικονομικό Πανεπιστήμιο Αθηνών</a></li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <header>
+                <h2>Γίνετε Μέλος στην Ιστοσελίδα:</h2>
+            </header>
+
+            <form>
+                <fieldset class="container">
+                    <legend>Προσωπικά Στοιχεία</legend>
+                    <div class="field">
+                        <label for="firstname">Όνομα</label>
+                        <input name="first_name" id="firstname" placeholder="Όνομα" required>
+                    </div>
+                    <div class="field">
+                        <label for="surname">Επώνυμο</label>
+                        <input name="sur_name" id="surname" placeholder="Επώνυμο" required>
+                    </div>
+                    <div class="field">
+                        <label for="birthdate">Ημερομηνία Γέννησης</label>
+                        <input type="date" name="birth_date" id="birthdate" autocomplete="bday" required>
+                    </div>
+                    <div class="field">
+                        <label for="gender">Φύλο</label>
+                        <select name="gender_option" id="gender">
+                            <option selected>Άνδρας</option>
+                            <option>Γυναίκα</option>
+                            <option>Δεν επιθυμώ να πω</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Στοιχεία Επικοινωνίας</legend>
+                    <div class="field">
+                        <label for="telephone">Σταθερό Τηλέφωνο</label>
+                        <input type="tel" name="telephone_number" id="telephone" placeholder="Τηλέφωνο" pattern="[0-9]{10}" title="Τα τηλέφωνα στην Ελλάδα απότελουνται από 10 ψηφία 0-9">
+                    </div>
+                    <div class="field">
+                        <label for="mobile">Κινητό</label>
+                        <input type="tel" name="mobile_number" id="mobile" required pattern="69[0-9]{8}" placeholder="Κινητό" title="Τα κινητά τηλέφωνα στην Ελλάδα ξεκινάνε με 69 και ακολουθούν 8 ψηφία 0-9">
+                    </div>
+                    <div class="field">
+                        <label for="address">Διεύθυνση</label>
+                        <input name="address" id="address" placeholder="Διεύθυνση">
+                    </div>
+                    <div class="field">
+                        <label for="zipcode">Τ.Κ</label>
+                        <input name="zip_code" id="zipcode" placeholder="Τ.Κ" autocomplete="postal-code">
+                    </div>
+                    <div class="field">
+                        <label for="country">Χώρα</label>
+                        <input name="country" id="country" placeholder="Χώρα" list="country_location" autocomplete="country-name" required>
+                        <datalist id="country_location">
+                            <option selected>Ελλάδα</option>
+                            <option>Κύπρος</option>
+                            <option>ΗΠΑ</option>
+                            <option>Γαλλία</option>
+                            <option>Άλλο</option>
+                        </datalist>
+                    </div>
+                    <div class="field">
+                        <label for="city">Πόλη</label>
+                        <input name="city" id="city" placeholder="Πόλη" list="city_location" required>
+                        <datalist id="city_location">
+                            <option selected>Αθήνα</option>
+                            <option>Θεσσαλονίκη</option>
+                            <option>Πάτρα</option>
+                            <option>Χανιά</option>
+                            <option>Βόλος</option>
+                            <option>Λεμεσός</option>
+                            <option>Λευκωσία</option>
+                            <option>Άλλο</option>
+                        </datalist>
+                    </div>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Στοιχεία Λογαριασμού</legend>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" autocomplete="email" name="email_address" id="email" placeholder="mail@example.gr" required>
+                    </div>
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input name="user_name" id="username" placeholder="Username" autocomplete="username" required>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" name="pass_word" id="password" placeholder="Password" required pattern="[A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Ο κωδικός πρέπει να περιέχει υποχρεωτικά τουλάχιστον 1 ψηφίο, και μόνο λατινικούς χαρακτήρες">
+                    </div>
+                    <div class="field">
+                        <label for="password_repeat">Επανάληψη Password</label>
+                        <input type="password" name="pass_repeat" id="password_repeat" required>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="show_pass">
+                        <label for="show_pass">Εμφάνιση password</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+                    <h2>Απαντήστε σε τουλάχιστον 7 από τις 11 ερωτήσεις:</h2>
+                    <fieldset class="radioquestion">
+                        <legend>1) Με ενδιαφέρουν τα Κινητά Δίκτυα σαν αντικείμενο: </legend>
+                        <div>
+                            <input type="radio" id="option1" name="radios" value="yes">
+                            <label for="option1">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option2" name="radios" value="no">
+                            <label for="option2">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>2) Έχω εργαστεί στον τομέα των Κινητών Δικτύων και Τηλεπικοινωνιών στο παρελθόν: </legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Πχ: σε κάποια εταιρεία κινητών τηλεφωνιών</p>
+                        </details>
+                        <div>
+                            <input type="radio" id="option3" name="radios2" value="yes">
+                            <label for="option3">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option4" name="radios2" value="no">
+                            <label for="option4">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>3) Έχω , ή πρόκειται να πάρω, πτυχίο στον τομέα της Επιστήμης Υπολογιστών: </legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Πχ: Επιστήμης Υπολογιστών, Πληροφορικής, Μηχανικών Η/Υ, Ψηφιακών Συστημάτων, Πληροφορικής και Τηλεπικοινωνιών</p>
+                        </details>
+                        <div>
+                            <input type="radio" id="option5" name="radios3" value="yes">
+                            <label for="option5">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option6" name="radios3" value="no">
+                            <label for="option6">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkquestion">
+                        <legend>4) Γνωρίζω κάποια από τις παρακάτω γλώσσες σε επίπεδο <strong>αρχάριου</strong>:</legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Δηλαδή, έχω μια επαρκή κατανόηση των βασικών δομών της γλώσσας και μπορώ να γράψω απλά προγράμματα σε αυτήν</p>
+                        </details>
+                        <div>
+                            <input type="checkbox" id="java1">
+                            <label for="java1">Java</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="python1">
+                            <label for="python1">Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ruby1">
+                            <label for="ruby1">Ruby</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cpp1">
+                            <label for="cpp1">C++</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cs1">
+                            <label for="cs1">C#</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkquestion">
+                        <legend>5) Γνωρίζω κάποια από τις παρακάτω γλώσσες σε επίπεδο <strong>προχωρημένου</strong>:</legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Δηλαδή, έχω μια αρκετά καλή κατανόηση σε σύνθετα χαρακτηριστικά της γλώσσας και μπορώ να γράψω περίπλοκα προγράμματα σε αυτήν</p>
+                        </details>
+                        <div>
+                            <input type="checkbox" id="java2">
+                            <label for="java2">Java</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="python2">
+                            <label for="python2">Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ruby2">
+                            <label for="ruby2">Ruby</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cpp2">
+                            <label for="cpp2">C++</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cs2">
+                            <label for="cs2">C#</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>6) Γνώριζα ή είχα ενδιαφερθεί στο παρελθόν για κάποια θέματα από όσα παρουσιάζονται στην παρούσα ιστοσελίδα: </legend>
+                        <div>
+                            <input type="radio" id="option7" name="radios4" value="yes">
+                            <label for="option7">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option8" name="radios4" value="no">
+                            <label for="option8">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>7) Θα ήθελα να συμμετέχω στην συγγραφή νέου περιεχομένου για την παρούσα ιστοσελίδα: </legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Πχ: Νέα άρθρα σε παρεμφερή θεματολογία, εμπλουτισμός των ήδη υπαρχόντων άρθρων</p>
+                        </details>
+                        <div>
+                            <input type="radio" id="option9" name="radios5" value="yes">
+                            <label for="option9">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option10" name="radios5" value="no">
+                            <label for="option10">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkquestion">
+                        <legend>8) Από την θεματολογία της ιστοσελίδας, με ενδιαφέρει περισσότερο ή/και έχω ασχοληθεί με</legend>
+                        <div>
+                            <input type="checkbox" id="iot">
+                            <label for="iot">Το Διαδίκτυο των Πραγμάτων</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="5g">
+                            <label for="5g">Το 5G</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="oldergen">
+                            <label for="oldergen">Τις παλιότερες γενιές κινητών επικοινωνιών</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="architecture">
+                            <label for="architecture">Την αρχιτεκτονική των κινητών δικτύων</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>9) Έχω συμμετάσχει ποτέ σε έρευνα πάνω στα Κινητά Δίκτυα: </legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Ακαδημαικού επιπέδου, σε ερευνητικά εργαστήρια, στην Ελλάδα ή το εξωτερικό</p>
+                        </details>
+                        <div>
+                            <input type="radio" id="option11" name="radios6" value="yes">
+                            <label for="option11">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option12" name="radios6" value="no">
+                            <label for="option12">Όχι</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="radioquestion">
+                        <legend>10) Έχω συμμετάσχει ποτέ σε συγγραφή λογισμικού ανοικτού κώδικα: </legend>
+                        <details>
+                            <summary>Περισσότερα</summary>
+                            <p>Σε έργα με θεματολογία σχετική ή μη των κινητών επικοινωνιών, ή και των δικτύων υπολογιστών γενικότερα</p>
+                        </details>
+                        <div>
+                            <input type="radio" id="option13" name="radios7" value="yes">
+                            <label for="option13">Ναι</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option14" name="radios7" value="no">
+                            <label for="option14">Όχι</label>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset class="radioquestion">
+                        <legend>11) Μπορώ να αφιερώσω χρόνο για την συμμετοχή μου στην παρούσα ιστοσελίδα περίπου:</legend>
+                        <div>
+                            <input type="radio" id="option15" name="radios8" value="1hour">
+                            <label for="option15">1 ώρα την εβδομάδα</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option16" name="radios8" value="1day">
+                            <label for="option16">1 μέρα την εβδομάδα</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option17" name="radios8" value="moredays">
+                            <label for="option17">Περισσότερες μέρες την εβδομάδα</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option18" name="radios8" value="everyday">
+                            <label for="option18">Καθημερινά</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <label for="message">Μήνυμα</label> <br>
+                <textarea name="message_field" id="message" rows=5 cols=100></textarea>
+                <br>
+                <input type="submit" value="Υποβολή">
+            </form>
+        </main>
+
+        <footer>
+            <p>Κωνσταντίνα Σουβατζιδάκη - Τμήμα Πληροφορικής ΟΠΑ<p>
+        </footer>
+    </body>
+</html>

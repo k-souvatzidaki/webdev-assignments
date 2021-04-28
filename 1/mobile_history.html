@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "el">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Konstantina Souvatzidaki, 3170149">
+        <meta name="description" content="a page about mobile networks">
+        <meta name="keywords" content="university,webdev,aueb">
+        <title>Γενιές Κινητής Επικοινωνίας</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="cyan_theme">
+        <link rel="stylesheet" type="text/css" href="style_pink.css" id="pink_theme" disabled>
+        <script src="functions.js" type="text/javascript"> </script>
+    </head>
+    <body> 
+        <nav class="back-to-ex1" title="backtoex1">
+            <a href="../index.html">Πίσω στην Άσκηση 1</a>
+        </nav>
+        <header class="page-header">
+            <h1>Η Ιστορία των Κινητών Επικοινωνιών</h1>
+            <nav>
+                <ul> 
+                    <li><a href="index.html">Αρχική Σελίδα</a></li>
+                    <li><a class="active" href="mobile_history.html">Γενιές Κινητής Επικοινωνίας</a></li>
+                    <li><a href="5G.html">Η 5η Γενιά (5G)</a></li>
+                    <li><a href="form.html">Γίνετε Μέλος</a></li>
+                    <li><button id="change_theme">Cyan Εμφάνιση</button></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <aside id="left" title="leftnav">
+            <nav title="sidenav">
+                <h2> Περιεχόμενα: </h2>
+                <ul>
+                    <li><a href="#1g">1η Γενιά</a></li>
+                    <li><a href="#2g">2η Γενιά</a></li>
+                    <li><a href="#2.5g">Γενιά 2.5</a></li>
+                    <li><a href="#3g">3η Γενιά</a></li>
+                    <li><a href="#4g">4η Γενιά</a></li>
+                    <li><p id="text-of-the-day">Το κείμενο της ημέρας</p></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <aside id="right" title="rightnav">
+            <h2> Χρήσιμες Πηγές: </h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/1G" target="_blank">Περισσότερες Πληροφορίες για την 1η Γενιά</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/2G" target="_blank">Περισσότερες Πληροφορίες για την 2η Γενιά και την Γενιά 2.5</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/3G" target="_blank">Περισσότερες Πληροφορίες για την 3η Γενιά</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/4G" target="_blank">Περισσότερες Πληροφορίες για την 4η Γενιά</a></li>
+                <li><a href="https://telephone-europe.com/news/the-evolution-of-cellular-mobile-signal-systems-from-1g-to-5g/" target="_blank">Η εξέλιξη των Τηλεπικοινωνιών</a></li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <header>
+                <h2>Η ιστορία των Κινητών Επικοινωνιών</h2>
+                <figure>
+                    <picture>
+                        <source media="(min-width:600px)" srcset="images/mobile_evolution_medium.png">
+                        <source media="(min-width:1300px)" srcset="images/mobile_evolution_large.png">
+                        <img src="images/mobile_evolution_small.jpg" alt="evolution of mobile generations">
+                    </picture>
+                    <figcaption>Η εξέλιξη των γενιών κινητής τηλεφωνίας</figcaption>
+                </figure>
+            </header>
+
+            <article class="container"> 
+                <section class="column">
+                    <section id="1g">
+                        <h3>Η 1η Γενιά (1G)</h3>
+                        <p>
+                            Η ιστορία των κινητών δικτύων ξεκινά από τα τέλη της δεκαετίας του ’70 με την κυκλοφορία των πρώτων δικτύων 
+                            1ης γενιάς. Πρωτοεμφανίστηκαν στην Ιαπωνία και ύστερα στις <abbr title="Ηνωμένες Πολιτείες της Αμερικής">ΗΠΑ</abbr> και τέλος στην Ευρώπη με αρχή το Ηνωμένο Βασίλειο. 
+                            Τα δίκτυα αυτά ήταν αναλογικά και παρείχαν μόνο βασικές υπηρεσίες φωνής, με σοβαρά προβλήματα ποιότητας και ασφάλειας. 
+                            Η βασικότερη αναλογική τεχνολογία των δικτύων 1G ήταν, μεταξύ άλλων, η <abbr title="Advanced Mobile Phone System">AMPS</abbr> 
+                            Τα τηλέφωνα 1ης γενιάς ήταν μεν κινητά, αλλά ήταν πολύ μεγάλα σε μέγεθος, πολυ βαριά, και πολύ ακριβά, επομένως
+                            ελάχιστοι είχαν την δυνατότητα να έχουν ένα στην κατοχή τους. Η κινητή τηλεφωνία ήταν μια επανάσταση στις υπηρεσίες 
+                            φωνής, άλλα η χρήση της δεν ήταν τόσο διαδεδομένη όσο σήμερα.
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/1g_phone_medium.jpg">
+                                <source media="(min-width:1300px)" srcset="images/1g_phone_large.jpg">
+                                <img src="images/1g_phone_small.jpg" alt="first mobile phones">
+                            </picture>
+                            <figcaption>Οι πρώτες κινητές συσκεύες</figcaption>
+                        </figure>
+                    </section>
+    
+                    <section id="2g">
+                        <h3>Η 2η Γενιά (2G)</h3>
+                        <p> 
+                            Τα δίκτυα 2G πρωτοκυκλοφόρησαν κατά την δεκαετία του '90 ως βελτιστοποίηση των δικτύων 2G με ψηφιακές 
+                            τεχνολογίες μετάδοσης. Παρείχαν πιο ασφαλείς υπηρεσίες φωνής, καθώς και τις πρώτες υπηρεσίες αποστολής 
+                            κειμένου και άλλων, μικρού όγκου δεδομένων. Η βασικότερη τεχνολογία των 2G δικτύων ήταν η 
+                            <abbr title="Global System for Mobile Communications">GSM</abbr>. 
+                            Τα κινητά τηλέφωνα 2ης γενιάς ήταν πολύ μικρότερα σε μέγεθος και πολύ πιο φθηνά από αυτά της 1ης γενιάς. Αυτό, σε συνδυασμό
+                            με τις μεγαλύτερες δυνατότητες κάλυψης των δικτύων 2G, έκανε την χρήση της τεχνολογίας αυτή πολύ πιο διαδεδομένη.
+                            Ακόμα και σήμερα κυκλοφορούν στο εμπόριο ορισμένα μοντέλα κινητών τηλεφώνων τεχνολογίας <abbr title="Global System for Mobile Communications">GSM</abbr>.
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/2g_phone_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/2g_phone_large.png">
+                                <img src="images/2g_phone_small.png" alt="2G mobile phones">
+                            </picture>
+                            <figcaption>Κινητή συσκευή 2ης γενιάς</figcaption>
+                        </figure>
+                    </section>
+                    
+                    <section id="2.5g">
+                        <h3>Η Γενιά 2.5 (2.5G)</h3>
+                        <p>
+                            Τα δίκτυα 2.5G αποτελούσαν εξέλιξη των 2G που εισήγαγε τεχνολογία μεταγωγής πακέτων (packet switching) 
+                            στις κινητές επικοινωνίες. Οι πιο διαδεδομένες τεχνολογίες 2.5G ήταν οι <abbr title=" General Packet Radio Service">GPRS</abbr>
+                            και <abbr title="Enhanced Data for Global Evolution">EDGE</abbr>, που αποτελούσαν και οι 2 ενισχυμένες μορφές της τεχνολογίας 
+                            <abbr title="Global System for Mobile Communications">GSM</abbr>. 
+                            Η μεταγωγή πακέτων επέτρεψε την μετάδοση δεδομένων στα κινητά δίκτυα, και άρα ήταν η αρχή για την δυνατότητα 
+                            πρόσβασης στο διαδίκτυο μέσω κινητών συσκευών. 
+                            Τα δίκτυα αυτά ήταν ένα στάδιο μετάβασης από τα δίκτυα 2G στα 3G, γι’αυτό και τους αποδόθηκε η ονομασία «Γενιά 2.5»
+                        </p> 
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/2.5G_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/2.5G_large.png">
+                                <img src="images/2.5G_small.png" alt="2.5G mobile phones">
+                            </picture>
+                            <figcaption>Κινητή συσκευή γενιάς 2.5</figcaption>
+                        </figure>
+                    </section>
+                </section>
+                
+                <section class="column">
+                    <section id="3g">
+                        <h3>Η 3η Γενιά (3G)</h3>
+                        <p>
+                            Τα δίκτυα 3G είναι δίκτυα μεταγωγής πακέτων, όπως τα 2.5G, με βελτιστοποιήσεις για πολύ γρήγορες ταχύτητες μετάδοσης
+                            δεδομένων. Η βασική τεχνολογία 3G είναι η <abbr title="Universal Mobile Telecommunications System">UMTS</abbr>, 
+                            η οποία βελτιστοποιήθηκε από την τεχνολογία <abbr title="High Speed Packet Access">HSPA</abbr>με ακόμα γρηγορότερες ταχύτητες. 
+                            Με την τεχνολογία 3ης γενιάς, έγινε εφικτή πλέον η αποδοτική πρόσβαση στο Διαδίκτυο και η εμφάνιση βασικών ιστοσελιδών σε
+                            κινητές συσκευές,έτσι ξεκίνησε η κυκλοφορία των πρώτων <dfn title="Έξυπνα κινητά - κινητές συσκευές με οθόνες αφής και εφαρμογές">smartphones</dfn>
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/3g_phone_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/3g_phone_large.png">
+                                <img src="images/3g_phone_small.png" alt="3G mobile phones">
+                            </picture>
+                            <figcaption>Κινητή συσκευή 3ης γενιάς</figcaption>
+                        </figure>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/first_3g_smartphones_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/first_3g_smartphones_large.png">
+                                <img src="images/first_3g_smartphones_small.png" alt="3G smartphone">
+                            </picture>
+                            <figcaption>Οι πρώτες συσκευές smartphone</figcaption>
+                        </figure>
+                    </section>
+    
+                    <section id="4g">
+                        <h3>Η 4η Γενιά (4G)</h3>
+                        <p>
+                            Τα δίκτυα 4G βασίστηκαν στην τεχνολογία <abbr title="Long Term Evolution">LTE</abbr>,και στις βελτιστοποιήσεις της 
+                            (<abbr title="Long Term Evolution">LTE</abbr> Advanced (<abbr title="Long Term Evolution">LTE</abbr>-A) και <abbr title="Long Term Evolution">LTE</abbr> Pro), 
+                            η οποία χρησιμοποιήθηκε για εξέλιξη των 3G τεχνολογιών όπως η <abbr title="Universal Mobile Telecommunications System">UMTS</abbr>. 
+                            Το 4G προσφέρει ταχύτητες της τάξεως των <dfn title="Gigabits/second - μονάδα μέτρησης ταχύτητας ενός δικτύου">Gbps</dfn> καθιστώντας τα 
+                            κινητά δίκτυα ως εναλλακτική των τοπικών δικτύων <dfn title="Τεχνολογία ασύρματων δικτύων, ευρέως διαδεδομένη στις μέρες μας">WiFi</dfn>, αφού πλέον παρέχουν πλήρη πρόσβαση στο διαδίκτυο. 
+                            Οι συσκευές 4ης γενιάς είναι πλέον <dfn title="Έξυπνα κινητά - κινητές συσκευές με οθόνες αφής και εφαρμογές">smartphones</dfn> με πολύ μεγάλες οθόνες και πλήρεις δυνατότητες πρόσβασης στο 
+                            διαδίκτυο, με μεγάλη ποικιλία διαδικτυακών εφαρμογών όπως online παιχνίδια,<dfn title="Μέσα κοινωνικής δικτύωσης"> social media</dfn> κ.α
+                            Ουσιαστικά, τα κινητά είναι πλέον φορητοί υπολογιστές ανάλογοι των λάπτοπ, σε μικρό μέγεθος.
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/4g_phone_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/4g_phone_large.png">
+                                <img src="images/4g_phone_small.png" alt="4G smartphone">
+                            </picture>
+                            <figcaption>Μοντέρνα συσκευή smartphone με τεχνολογία LTE 4G</figcaption>
+                        </figure>
+                    </section>
+                </section>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Κωνσταντίνα Σουβατζιδάκη - Τμήμα Πληροφορικής ΟΠΑ<p>
+        </footer>
+    </body>
+</html>

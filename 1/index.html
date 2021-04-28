@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang = "el">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Konstantina Souvatzidaki, 3170149">
+        <meta name="description" content="a page about mobile networks">
+        <meta name="keywords" content="university,webdev,aueb">
+        <title>Κινητές Επικοινωνίες</title>
+        <link rel="stylesheet" type="text/css" href="style.css" id="cyan_theme">
+        <link rel="stylesheet" type="text/css" href="style_pink.css" id="pink_theme" disabled>
+        <script src="functions.js" type="text/javascript"> </script>
+    </head>
+    <body> 
+        <nav class="back-to-ex1" title="backtoex1">
+            <a href="../index.html">Πίσω στην Άσκηση 1</a>
+        </nav>
+        <header class="page-header">
+            <h1>Η Ιστορία των Κινητών Επικοινωνιών</h1>
+            <nav title="sitenav">
+                <ul> 
+                    <li><a class="active" href="index.html">Αρχική Σελίδα</a></li>
+                    <li><a href="mobile_history.html">Γενιές Κινητής Επικοινωνίας</a></li>
+                    <li><a href="5G.html">Η 5η Γενιά (5G)</a></li>
+                    <li><a href="form.html">Γίνετε Μέλος</a></li>
+                    <li><button id="change_theme">Cyan Εμφάνιση</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside id="left" title="leftnav">
+            <nav title="sidenav">
+                <h2> Περιεχόμενα: </h2>
+                <ul>
+                    <li><a href="#about">Τι είναι τα Κινητά Δίκτυα</a></li>
+                    <li><a href="#devices">Συσκευές</a></li>
+                    <li><a href="#structure">Δομή</a></li>
+                    <li><a href="#terminology">Ορολογία</a></li>
+                    <li><p id="text-of-the-day">Το κείμενο της ημέρας</p></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <aside id="right" title="rightnav">
+            <h2> Χρήσιμες Πηγές: </h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Cellular_network" target="_blank">Περισσότερες Πληροφορίες για τα Κινητά Δίκτυα</a></li>
+                <li><a href="https://radio-waves.orange.com/en/how-does-a-mobile-network-work/" target="_blank">Πώς λειτουργεί ένα Κινητό Δίκτυο</a></li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <header>
+                <h2>Γενικές Πληροφορίες για τα Κινητά Δίκτυα</h2>
+                <figure>
+                    <picture>
+                        <source media="(min-width:600px)" srcset="images/mobile_phones_medium.png">
+                        <source media="(min-width:1300px)" srcset="images/mobile_phones_large.png">
+                        <img src="images/mobile_phones_small.png" alt="mobile phones">
+                    </picture>
+                    <figcaption>Κινητά τηλέφωνα</figcaption>
+                </figure>
+            </header>
+
+            <article class='container'> 
+                <section class='column'>
+                    <section id="about">
+                        <h3>Τι είναι τα Κινητά Δίκτυα;</h3>
+                        <p>Τα <em>κινητά δίκτυα (cellular networks)</em> είναι ένας τύπος ασύρματων δικτύων επικοινωνιών,  
+                            όπου  οι συνδεδεμένες συσκευές μπορούν να κινούνται ελεύθερα στην περιοχή κάλυψης του δικτύου 
+                            <strong>χωρίς να αποσυνδέονται</strong> και άρα να χάνουν πρόσβαση στις υπηρεσίες του. 
+                        </p>
+                        <button id="showhiddentext">Δείτε!</button>
+                        <p id="hiddentext">Τα κινητά δίκτυα, είναι ένας από τους αγαπημένους μου τομείς της Πληροφορικής, και θα 
+                            ήθελα να ασχοληθώ με αυτά επαγγελματικά στο μέλλον. Αυτός είναι ο λόγος που επέλεξα να είναι
+                            αυτά το θέμα της παρούσας ιστοσελίδας.
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/base_station_medium.jpg">
+                                <source media="(min-width:1300px)" srcset="images/base_station_large.jpg">
+                                <img src="images/base_station_small.jpg" alt="base stations">
+                            </picture>
+                            <figcaption>Πραγματικος σταθμός βάσης</figcaption>
+                        </figure>
+                    </section>
+
+                    <section id="devices">
+                        <h3>Οι συσκευές των κινητών δικτύων</h3>
+                        <p> Τα σημερινά κινητά δίκτυα είναι πολύ εξελιγμένα και <em>υποστηρίζουν πολλά είδη συσκευών</em>. 
+                            Κινητά τηλέφωνα, υπολογιστές-ταμπλέτες, και συσκευές <abbr title="Internet of Things">IOT</abbr> όπως 
+                            <dfn title="έξυπνα ρολόγια - ρολόγια με λειτουργίες κινητού τηλεφώνου και αισθητήρες κίνησης">smart watches</dfn>, 
+                            <dfn title="έξυπνες τηλεοράσεις - τηλεοράσεις με σύνδεση στο διαδίκτυο">smart TVs</dfn> και άλλα,
+                            είναι ασύρματες κινητές συσκευές που κάθε άτομο στις περισσότερες χώρες του πλανήτη χρησιμοποιεί πλέον στην καθημερινότητα του. 
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/smart_watch_medium.jpg">
+                                <source media="(min-width:1300px)" srcset="images/smart_watch_large.jpg">
+                                <img src="images/smart_watch_small.jpg" alt="smartwatch">
+                            </picture>
+                            <figcaption>Ένα smartwatch</figcaption>
+                        </figure>
+                    </section>
+                </section>
+
+                <section class="column">
+                    <section id="structure">
+                        <h3>Η δομή των Κινητών Δικτύων</h3>
+                        <p>Τα κινητά δίκτυα αποτελούνται από <strong>Σταθμούς Βάσης (Base Stations)</strong> στους οποίους συνδέονται οι κινητές συσκευές για να αποκτήσουν
+                            πρόσβαση στις υπηρεσίες του δικτύου, δηλαδή να μπορέσουν να επικοινωνήσουν με άλλες συσκευές. 
+                            Οι σταθμοί βάσης εκπέμπουν σε προκαθορισμένες <em>συχνότητες</em> για μετάδοση φωνής ,ή ακόμα και 
+                            άλλων ειδών περιεχομένου στα πιο σύγχρονα κινητά δίκτυα. Οι σταθμοί βάσης είναι συνδεδεμένοι μεταξύ τους ασύρματα ή ενσύρματα, 
+                            σχηματίζουν κελιά, με κάλυψη που στις μέρες μας έχει έκταση μεγάλων πόλεων ή και ολόκληρων χωρών.
+                        </p>
+                        <figure>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/base_stations_medium.png">
+                                <source media="(min-width:1300px)" srcset="images/base_stations_large.png">
+                                <img src="images/base_stations_small.png" alt="cells">
+                            </picture>
+                            <figcaption>Τα κελιά ενός κινητού δικτύου</figcaption>
+                        </figure>
+                    </section>
+                
+                    <section id="terminology">
+                        <h3>Η βασική ορολογία των Κινητών Δικτύων</h3>
+                        <dl>
+                            <dt>Σταθμός Βάσης</dt>
+                            <dd> 
+                                Ο Σταθμός Βάσης είναι ένας πομπός και δέκτης ραδιοσημάτων που λειτουργεί ως σημείο πρόσβασης ενός κινητού
+                                δικτύου
+                            </dd>
+                            <dt>Συχνότητα</dt>
+                            <dd>
+                                Η Συχνότητα είναι ο αριθμός των φορών που ένα ραδιοσήμα περνάει από 
+                                ένα προκαθορισμένο σημείο σε μια μονάδα χρόνο. Η συχνότητα μετράται σε <dfn title="Hertz">Hz</dfn>, δηλαδή κύκλους/δευτερόλεπτο.
+                            </dd>
+                            <dt>Περιοχή Κάλυψης</dt>
+                            <dd>
+                                Η Περιοχή Κάλυψης ενός ασύρματου κινητού δικτύου είναι η εμβέλεια στην οποία μια κινητή συσκευή
+                                μπορεί να συνδεθεί σε κάποιον από τους σταθμούς βάσης του δικτύου και να λάβει τις υπηρεσίες που προσφέρει το δίκτυο αυτό.
+                            </dd>
+                            <dt>Διαδίκτυο των Πραγμάτων</dt>
+                            <dd>
+                                Το Διαδίκτυο των Πραγμάτων (<abbr title="Internet of Things">IOT</abbr>) είναι ένα δίκτυο αντικειμένων, ουσιαστικά
+                                ένα δίκτυο στο οποίο εκτός από τις παραδοσιακές κινητές συσκεύες όπως τα λάπτοπ, τα κινητά και
+                                οι ταμπλέτες, συνδέονται και επικοινωνούν μεταξύ τους και άλλα είδη συσκευών όπως οικιακές συσκευές, αισθητήρες, και άλλα.
+                            </dd>
+                        </dl>
+                    </section>
+                </section>
+            </article>
+            
+        </main>
+
+        <footer>
+            <p>Κωνσταντίνα Σουβατζιδάκη - Τμήμα Πληροφορικής ΟΠΑ<p>
+        </footer>
+    </body>
+</html>
