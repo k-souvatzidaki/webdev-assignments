@@ -1,4 +1,4 @@
-# webdev-assignments
+# Web Development
 Assignments for my Web Development course. The text in webpages is in Greek.
 
 ## Assignment #1 
