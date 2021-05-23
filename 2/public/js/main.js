@@ -18,10 +18,14 @@ function fetch_url() {
 
     fetch(url,init)
     .then(response => {
-        response.json()
+        if(response.ok) {
+            return response.json()
+        }
     })
     .then(obj => {
+        //view json objects content in webpage here with handlebars
         console.log('Received',obj)
+        //document.body.innerHTML = obj.work[0].authorweb; //gets the name of the author for first work returned
     })
     .catch(error => {
         console.log(error)
