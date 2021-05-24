@@ -1,0 +1,14 @@
+{
+  "name": "webdev_assigment_2",
+  "version": "1.0.0",
+  "description": "the 2nd assignment for the webdev course ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Konstantina Souvatzidaki",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
