@@ -3,7 +3,7 @@ var templates = {}
 templates.workDetails = Handlebars.compile(`
 {{#each work}}
     <section>
-        <p>{{authorweb}} {{titleweb}}</p>
+        <p>{{authorweb}} {{titleweb}} {{workid}}</p>
         <input type="button" class="favorite" value="+ Αγαπημένα">
     </section>
 {{/each}}
@@ -37,8 +37,7 @@ function fetch_url() {
         }
     })
     .then(obj => {
-        console.log('Received',obj) //TODO remove
-
+        console.log('Received',obj)
         //view json objects content in webpage with Handlebars
         let results = document.querySelector("article")
         let content =  templates.workDetails(obj)
@@ -56,5 +55,13 @@ function fetch_url() {
 
 //click listener for add to favorites button
 function favorite() {
-    console.log("Click!")
+    if(this.value==="+ Αγαπημένα") {
+        //TODO add to favorites list
+
+        this.value = "- Αγαπημένα"
+    }else {
+        //TODO remove from favorites list
+        
+        this.value = "+ Αγαπημένα"
+    }
 }
