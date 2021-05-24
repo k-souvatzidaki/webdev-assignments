@@ -1,9 +1,14 @@
 //The Handlebars template to view works
 var templates = {}
 templates.workDetails = Handlebars.compile(`
+<h2>Αποτελέσματα Αναζήτησης: </h2>
 {{#each work}}
     <section>
-        <p>{{authorweb}} {{titleweb}} {{workid}}</p>
+        <ul>
+            <li class="author">{{authorweb}}</li>
+            <li class="title">{{titleweb}}</li>
+            <li class="workid">{{workid}}</li>
+        </ul>
         <input type="button" class="favorite" value="+ Αγαπημένα">
     </section>
 {{/each}}
@@ -21,15 +26,13 @@ function fetch_url() {
     let searchbox = document.querySelector("[type=text]")
     let input = searchbox.value
     let url = "https://reststop.randomhouse.com/resources/works/?start=0&max=0&expandLevel=1&search="+input
-    console.log(url)
-
     let h = new Headers()
     h.append('Accept','application/json')
     let init = {
         method: 'GET',
         headers: h
     }
-
+    //GET works
     fetch(url,init)
     .then(response => {
         if(response.ok) {
@@ -53,15 +56,37 @@ function fetch_url() {
     })
 }
 
-//click listener for add to favorites button
-function favorite() {
-    if(this.value==="+ Αγαπημένα") {
-        //TODO add to favorites list
 
+//click listener for "add to favorites" button
+function favorite() {
+    //add to favorites list by sending a POST message to the server
+    if(this.value==="+ Αγαπημένα") {
+        let url = "http://localhost:8080/favorites"
+        let h = new Headers()
+        h.append('Content-Type','application/json')
+        //get workid, author and name, to create a new JSON object
+        let ulist = this.parentNode.childNodes[1]
+        let obj = {
+            "author": ulist.childNodes[1].innerHTML,
+            "title": ulist.childNodes[3].innerHTML,
+            "workid": ulist.childNodes[5].innerHTML
+        }
+        //set headers
+        let init = {
+            method: 'POST',
+            headers: h,
+            body: JSON.stringify(obj),
+        }
+        //POST new favorite
+        fetch(url,init)
+        .then(
+            console.log("sent")
+        )
+        //change button value
         this.value = "- Αγαπημένα"
+
+    //TODO remove from favorites list
     }else {
-        //TODO remove from favorites list
-        
         this.value = "+ Αγαπημένα"
     }
 }
