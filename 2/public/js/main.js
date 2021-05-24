@@ -1,3 +1,13 @@
+//handlebars template
+var templates = {}
+templates.workDetails = Handlebars.compile(`
+{{#each work}}
+    <section>
+        <p>{{authorweb}} {{titleweb}}</p>
+    </section>
+{{/each}}
+`)
+
 window.addEventListener('load',function() {
     let submit_button = document.querySelector("[type=button]")
     submit_button.addEventListener('click',fetch_url)
@@ -25,6 +35,9 @@ function fetch_url() {
     .then(obj => {
         //view json objects content in webpage here with handlebars
         console.log('Received',obj)
+        let main = document.querySelector("article")
+        let content =  templates.workDetails(obj)
+        main.innerHTML = content
         //document.body.innerHTML = obj.work[0].authorweb; //gets the name of the author for first work returned
     })
     .catch(error => {
