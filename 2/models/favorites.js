@@ -1,0 +1,1 @@
+//DAO object to manage works in the favorites list
