@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const dao = require('./models/favorites.js')
 
 app.listen(8080)
 
@@ -25,5 +26,7 @@ app.get('/', function(req, res){
 app.post('/favorites',function(req,res){
     console.log("New POST request to add a favorite")
     console.log(req.body)
-    //TODO add new favorite to db
+    //add new favorite to db
+    dao.add(req.body)
+    //TODO inform client if the work is already saved as a favorite
 })
