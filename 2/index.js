@@ -1,7 +1,8 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const dao = require('./models/favorites.js')
+const dao = require('./models/favorites_dao.js')
+const exp_hb = require('express-handlebars')
 
 app.listen(8080)
 
@@ -18,19 +19,27 @@ app.get('/', function(req, res){
         console.log(err)
     })
 })
+//initialize express handlebars
+app.engine('handlebars',exp_hb())
+app.set('view engine','handlebars')
 
 
 /** REQUESTS */
 
 //POST a new favorite
-app.post('/favorites',function(req,res){
+app.post('/add_favorite',function(req,res){
     console.log("New POST request to add a favorite")
-    //add new favorite to db
+    //add new favorite to list
     let added = dao.add(req.body)
     console.log(added)
     //TODO inform client if the work is already saved as a favorite
-    if(added) {
-        console.log("Added to array")
-    }
-    
+    res.send(added)
+})
+
+//GET page with list of favorites 
+app.get('/favorites',function(req,res) {
+    console.log("New GET request to get a page with the favorites")
+    res.render('favorites_view', {
+        title : "Εδώ θα εμφανίζονται τα αγαπημένα!"
+    })
 })

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "el">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Konstantina Souvatzidaki, 3170149">
+        <meta name="description" content="a page to search book information with the Penguin Random House web api">
+        <meta name="keywords" content="university,webdev,aueb,fetch api, nodejs">
+        <title>Η Λίστα Αγαπημένων Μου</title>
+    </head>
+    <body>
+        <header>
+            <a href="../">Πίσω στην αρχική</a>
+            <h1>Καλως ήρθατε στην σελίδα των αγαπημένων σας βιβλίων του Penguin Random House</h1>
+        </header>
+
+        <main>
+
+            <header>
+                <h2>Φιλτράρισμα Αγαπημένων:</h2>
+                <form>
+                    <label for="filterbar">Αναζήτηση</label>
+                    <input type="text" name="filter" id="filterbar" placeholder="πχ John Grisham">
+                </form>
+            </header>
+
+            <article>
+                {{{body}}}
+            </article>
+
+        <footer>
+            <p>Κωνσταντίνα Σουβατζιδάκη - Τμήμα Πληροφορικής ΟΠΑ<p>
+        </footer>
+    </body>
+</html>
