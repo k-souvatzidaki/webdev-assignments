@@ -25,7 +25,6 @@ app.set('view engine','handlebars')
 
 
 /** REQUESTS */
-
 //POST a new favorite
 app.post('/add_favorite',function(req,res){
     console.log("New POST request to add a favorite")
@@ -36,10 +35,23 @@ app.post('/add_favorite',function(req,res){
     res.send(added)
 })
 
+//POST remove favorite
+app.post('/remove_favorite',function(req,res){
+    console.log("New POST request to remove a favorite")
+    //add new favorite to list
+    let removed = dao.remove(req.body.workid)
+    console.log(removed)
+    //TODO inform client if the work is already saved as a favorite
+    res.send(removed)
+})
+
 //GET page with list of favorites 
 app.get('/favorites',function(req,res) {
     console.log("New GET request to get a page with the favorites")
+
     res.render('favorites_view', {
-        title : "Εδώ θα εμφανίζονται τα αγαπημένα!"
+        header1 : "Τα αγαπημένα σας έργα!",
+        header2 : "Φιλτράρισμα αγαπημένων:",
+        favorites : dao.show()
     })
 })

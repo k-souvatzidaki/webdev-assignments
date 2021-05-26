@@ -17,9 +17,23 @@ function add_favorite(work) {
     }
 }
 
-//return all favorites from list
+//remove a favorite from list of works
+function remove_favorite(workid) {
+    if(favorite_works_ids.includes(workid)) {
+        console.log("Removing work from list")
+        //remove workid from lists
+        var index = favorite_works_ids.indexOf(workid)
+        favorite_works_ids.splice(index,1)
+        favorite_works.splice(index,1)
+        return true
+    }else {
+        return false
+    }
+}
+
+//return all favorites list
 function show_favorites() {
-    
+    return favorite_works
 }
 
 class Work {
@@ -28,10 +42,14 @@ class Work {
         this.title = title
         this.workid = workid
     }
+    add_critic(critic) {
+        this.critic = critic
+    }
 }
 
 //EXPORTS
 module.exports = {
     add: add_favorite,
+    remove: remove_favorite,
     show: show_favorites
 }

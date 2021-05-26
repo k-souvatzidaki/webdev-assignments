@@ -1,1 +1,29 @@
-<h1>{{title}}</h1>
+<header>
+    <a href="../">Πίσω στην αρχική</a>
+    <h1>{{header1}}</h1>
+</header>
+
+<main>
+
+    <header>
+        <h2>{{header2}}</h2>
+        <form>
+            <input type="text" name="filter" id="filterbar" placeholder="πχ John Grisham">
+        </form>
+    </header>
+
+    <article>
+        {{#each favorites}}
+            <section>
+                <ul>
+                    <li class="author">{{author}}</li>
+                    <li class="title">{{title}}</li>
+                    <li class="workid">{{workid}}</li>
+                </ul>
+                <input type="button" class="favorite" value="- Αγαπημένα">
+                <input type="button" class="edit" value="Επεξεργασία">
+            </section>
+        {{/each}}
+    </article>
+
+</main>
