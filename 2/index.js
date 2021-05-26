@@ -25,8 +25,12 @@ app.get('/', function(req, res){
 //POST a new favorite
 app.post('/favorites',function(req,res){
     console.log("New POST request to add a favorite")
-    console.log(req.body)
     //add new favorite to db
-    dao.add(req.body)
+    let added = dao.add(req.body)
+    console.log(added)
     //TODO inform client if the work is already saved as a favorite
+    if(added) {
+        console.log("Added to array")
+    }
+    
 })

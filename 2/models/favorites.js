@@ -1,42 +1,34 @@
+const e = require("express")
+
 //DAO object to manage works in the favorites list
-const constants = require('./constants.js')
-const mysql = require('mysql')
+let favorite_works_ids = []
+let favorite_works = []
 
-//connect to aws database
-function connect_to_aws() {
-    let connection = mysql.createConnection({
-        host: constants.aws.host,
-        port: constants.aws.port,
-        user: constants.aws.user,
-        password: constants.aws.pass,
-        database: constants.aws.database
-    })
-    return connection
-}
-
-//add a new favorite to database
+//add a new favorite to list of works
 function add_favorite(work) {
-    let connection = connect_to_aws()
-    let query = "INSERT INTO Work(author,title,workid) VALUES ('"+work.author+"','"+work.title+"',"+work.workid+")"
-    connection.query(query, function (err, result) {
-        if (err) {
-            console.log("Already exists!")
-        }else {
-            console.log("Inserted Work with id = "+work.workid)
-        }
-    })
+    if(favorite_works_ids.includes(work.workid)) {
+        console.log("Already Exists")
+        return false
+    }else {
+        console.log("Added work to list")
+        favorite_works.push(new Work(work.author,work.title,work.workid))
+        favorite_works_ids.push(work.workid)
+        return true
+    }
 }
 
-//return all favorites from database
+//return all favorites from list
 function show_favorites() {
-    let connection = connect_to_aws()
-    let query = "SELECT * FROM Work"
-    connection.query(query, function (err, result) {
-        if (err) throw err
-        console.log(result)
-    })
+    
 }
 
+class Work {
+    constructor(author, title, workid) {
+        this.author = author
+        this.title = title
+        this.workid = workid
+    }
+}
 
 //EXPORTS
 module.exports = {
