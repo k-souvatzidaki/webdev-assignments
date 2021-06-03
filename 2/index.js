@@ -63,7 +63,7 @@ app.get('/:workid',function(req,res) {
         workid: req.params.workid,
         title: work.title,
         author: work.author,
-        critic: work.comment
+        comment: work.comment
     })
 })
 

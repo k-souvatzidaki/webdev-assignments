@@ -46,7 +46,7 @@ body {
 .top nav {
     margin-top: 10px;
 }
-.top a, input[type=submit]{
+.top a, input[type=submit], form.info input[type=button]{
     background-color: #fcf0e4 ;
     color:#9c745a;
     border: solid 2px #5e443f;
@@ -54,7 +54,7 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-.top a:hover , input[type=submit]:hover{
+.top a:hover , input[type=submit]:hover, form.info input[type=button]:hover{
     background-color: #352825;
 }
 
@@ -69,6 +69,7 @@ body {
 }
 .panel h1 {
     color:#ffffff;
+    font-size:38px;
 }
 
 #searchbar, #filterbar {
@@ -76,13 +77,13 @@ body {
     border-radius: 10px;
     width:50%;
     height: 30px;
-    background:#f8f1e9 ;
+    background:#f8f1e9;
 }
 
 
 article h2{
-    padding-left: 20px; 
-    color:#fffbf7; 
+    padding-left: 25px; 
+    color: #251c1a;
 }
 
 section.work {
@@ -99,7 +100,7 @@ section.work {
 
 section.work form *{
     padding:25px;
-    margin:20px;
+    margin:23px;
     background-color: #835f53;
     border-radius: 20px;
     border: solid 3px #5f4641;
@@ -120,3 +121,38 @@ section.work form *:hover{
     border-radius: 20px;
     border: solid 3px #5f4641;
 }
+
+.work ul{
+    max-width: 70%;
+    list-style: none;
+    color: #251c1a;
+    font-size: 18px;
+    letter-spacing:1px;
+}
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+.comment {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+
+form.info input{
+    padding:10px;
+    margin:10px;
+    border:solid #41302d 1px;
+    border-radius: 10px;
+    background:#f8f1e9 ;
+}
+form.info label{
+    margin:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+form.info input[type=button] {
+    width:20%;
+    align-self: center;
+}
+

@@ -5,8 +5,8 @@ templates.workDetails = Handlebars.compile(`
 {{#each work}}
     <section class="work">
         <ul>
-            <li class="author">{{authorweb}}</li>
             <li class="title">{{titleweb}}</li>
+            <li class="author">{{authorweb}}</li>
             <li class="workid">{{workid}}</li>
         </ul>
         

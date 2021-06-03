@@ -19,8 +19,8 @@ function favorite() {
         //get workid, author and name, to create a new JSON object
         let ulist = this.parentNode.parentNode.childNodes[1]
         let obj = {
-            "author": ulist.childNodes[1].innerHTML,
-            "title": ulist.childNodes[3].innerHTML,
+            "title": ulist.childNodes[1].innerHTML,
+            "author": ulist.childNodes[3].innerHTML,
             "workid": ulist.childNodes[5].innerHTML
         }
         //set headers
@@ -92,7 +92,6 @@ function filter() {
                     let text = items[j].innerHTML
                     console.log(text)
                     if(text.toUpperCase().indexOf(filter) > -1) {
-                        console.log("AAAAAAAAAAAAAAAA")
                         exists = true;
                     }
                     if(exists) {
