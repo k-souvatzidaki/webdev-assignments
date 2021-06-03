@@ -1,4 +1,4 @@
-//Add event listeners to add functionality to buttons when the website is loaded
+//Add event listeners to add functionality to elements when the website is loaded
 window.addEventListener('load',function() {
     let add_to_faves = document.querySelectorAll(".favorite")
     for(var i=0; i < add_to_faves.length;i++ ) {
@@ -78,6 +78,7 @@ function favorite() {
     }
 }
 
+//filter the favorites list by user input
 function filter() {
     setTimeout(function(){
         console.log(".5 second has passed")
@@ -99,10 +100,8 @@ function filter() {
                     }else {
                         items[j].parentNode.parentNode.style.display = "none";
                     }
-                }
-                
+                } 
             }
-            
         }
     },500)
 }

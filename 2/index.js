@@ -4,7 +4,7 @@ const app = express()
 const dao = require('./models/favorites_dao.js')
 const exp_hb = require('express-handlebars')
 
-app.listen(8080)
+app.listen(8080) //listen to port 8080
 
 //static content in directory "public", accessible under path "/static"
 app.use('/static', express.static(__dirname + '/public'))
@@ -67,7 +67,7 @@ app.get('/:workid',function(req,res) {
     })
 })
 
-//POST remove favorite
+//POST edit a favorite work's info
 app.post('/edit_favorite',function(req,res){
     console.log("New POST request to edit a favorite")
     //edit favorite in  list

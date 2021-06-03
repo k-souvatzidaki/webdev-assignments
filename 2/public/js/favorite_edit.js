@@ -4,13 +4,14 @@ window.addEventListener('load',function() {
     edit_fave.addEventListener('click',edit)
 })
 
+//click listener for "edit favorite" button
 function edit() {
-    //get values of textfields, make them a json object and set a POST request to server
+    //edit favorites in the list by sending a POST message to the server
+    //get values of textfields and make a json object
     let url = "http://localhost:8080/edit_favorite"
         let h = new Headers()
         h.append('Content-Type','application/json')
         //get workid, author and name, to create a new JSON object
-        console.log(this.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].innerHTML)
         let obj = {
             "workid": this.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].innerHTML ,
             "title": this.parentNode.childNodes[3].value,

@@ -43,7 +43,6 @@ function fetch_url() {
         }
     })
     .then(obj => {
-        console.log('Received',obj)
         //view json objects content in webpage with Handlebars
         let results = document.querySelector("article")
         let content =  templates.workDetails(obj)

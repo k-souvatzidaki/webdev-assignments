@@ -1,4 +1,4 @@
-/*font*/
+/* font */
 /* greek */
 @font-face {
     font-family: 'Ubuntu';
@@ -27,6 +27,7 @@ body {
     margin:0;
 }
 
+/* page header */
 .top {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +59,7 @@ body {
     background-color: #352825;
 }
 
+/* page panel */
 .panel {
     background-color: #835f53;
     padding: 20px; 
@@ -72,6 +74,7 @@ body {
     font-size:38px;
 }
 
+/* searchbars */
 #searchbar, #filterbar {
     border:solid #41302d 1px;
     border-radius: 10px;
@@ -80,12 +83,11 @@ body {
     background:#f8f1e9;
 }
 
-
+/* works display */
 article h2{
     padding-left: 25px; 
     color: #251c1a;
 }
-
 section.work {
     background-color: #debd99;
     padding: 20px; 
@@ -97,7 +99,6 @@ section.work {
     border-radius: 20px;
     border: solid 3px #5f4641;
 }
-
 section.work form *{
     padding:25px;
     margin:23px;
@@ -107,11 +108,9 @@ section.work form *{
     color:#f8f1e9; 
     font-size:16px;
 }
-
 section.work form *:hover{
     background-color: #352825;
 }
-
 .info {
     display:flex;
     flex-direction: column;
@@ -121,7 +120,6 @@ section.work form *:hover{
     border-radius: 20px;
     border: solid 3px #5f4641;
 }
-
 .work ul{
     max-width: 70%;
     list-style: none;
@@ -138,7 +136,7 @@ section.work form *:hover{
     font-weight: bold;
 }
 
-
+/* work edit form */
 form.info input{
     padding:10px;
     margin:10px;
