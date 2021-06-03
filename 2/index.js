@@ -58,7 +58,18 @@ app.get('/favorites',function(req,res) {
 app.get('/:workid',function(req,res) {
     console.log("New GET request to get an edit page for a favorite")
 
+    work = dao.get(req.params.workid)
     res.render('favorite_edit',{
-        workid: req.params.workid
+        workid: req.params.workid,
+        title: work.title,
+        author: work.author,
+        critic: work.comment
     })
+})
+
+//POST remove favorite
+app.post('/edit_favorite',function(req,res){
+    console.log("New POST request to edit a favorite")
+    //edit favorite in  list
+    dao.edit(req.body)
 })

@@ -1,17 +1,18 @@
 <header class="panel">
-    <h1>Επεξεργασία του έργου με Κωδικό: {{workid}} </h1>
+    <h1>Επεξεργασία του έργου με Κωδικό: </h1>
+    <h2>{{workid}}</h2>
 </header>
 
 <article>
     <form class="info"> 
         <label for="title">Τίτλος Έργου</label>
-        <input name="work_title" id="title" value="title">
+        <input name="work_title" id="title" value="{{title}}">
 
         <label for="author">Συγγραφέας Έργου</label>
-        <input name="work_author" id="author" value="author">
+        <input name="work_author" id="author" value="{{author}}">
 
         <label for="comment">Σχόλιο</label>
-        <input name="work_comment" id="comment" value="comment">
+        <input name="work_comment" id="comment" value="{{comment}}">
 
         <input type="button" class="submit_edit" value="Αποθήκευση Αλλαγών">
     </form>

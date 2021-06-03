@@ -36,14 +36,30 @@ function show_favorites() {
     return favorite_works
 }
 
+//return a favorite based on workid
+function get_favorite(workid) {
+    var index = favorite_works_ids.indexOf(workid)
+    return favorite_works[index]
+}
+
+//change the values of a favorite
+function edit_favorite(work) {
+    var index = favorite_works_ids.indexOf(work.workid)
+    var w = favorite_works[index]
+    w.author = work.author
+    w.title = work.title
+    w.add_comment(work.comment)
+    console.log(favorite_works[index].comment)
+}
+
 class Work {
     constructor(author, title, workid) {
         this.author = author
         this.title = title
         this.workid = workid
     }
-    add_critic(critic) {
-        this.critic = critic
+    add_comment(comment) {
+        this.comment = comment
     }
 }
 
@@ -51,5 +67,7 @@ class Work {
 module.exports = {
     add: add_favorite,
     remove: remove_favorite,
-    show: show_favorites
+    show: show_favorites,
+    get: get_favorite,
+    edit: edit_favorite
 }

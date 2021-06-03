@@ -8,8 +8,6 @@ window.addEventListener('load',function() {
 
 //click listener for "add to favorites" button
 function favorite() {
-    console.log("click!")
-    console.log(this.value)
     //add to favorites list by sending a POST message to the server
     if(this.value==="+ Αγαπημένα") {
         let url = "http://localhost:8080/add_favorite"
