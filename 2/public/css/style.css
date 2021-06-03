@@ -107,6 +107,7 @@ section.work form *{
     border: solid 3px #5f4641;
     color:#f8f1e9; 
     font-size:16px;
+    font-weight: bold;
 }
 section.work form *:hover{
     background-color: #352825;
