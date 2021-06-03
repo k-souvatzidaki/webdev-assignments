@@ -1,0 +1,70 @@
+/*font*/
+/* greek */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1Czjs2yNL4U.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #000000 url("../res/bg.jpg");
+    background-size:cover;
+    font-size:15px;
+    word-wrap: break-word;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0;
+    padding:25px;
+    background-color:#7f5e57;
+    color:#fcf0e4;
+}
+.top h1 {
+    letter-spacing:2px;
+}
+.top * {
+    margin:0;
+}
+.top a{
+    background-color: #fcf0e4 ;
+    color:#9c745a;
+    border: solid 2px #5e443f;
+    padding:10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.top a:hover {
+    background-color: #352825;
+}
+
+.panel {
+    background-color: #956b5d;
+    padding: 20px; 
+    margin:20px;
+    text-align: center;
+    border-radius: 20px;
+    border: solid 3px #5f4641;
+    color:#fcf0e4; 
+}

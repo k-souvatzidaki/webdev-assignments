@@ -55,3 +55,12 @@ app.get('/favorites',function(req,res) {
         favorites : dao.show()
     })
 })
+
+//GET edit page for a favorite work
+app.get('/:workid',function(req,res) {
+    console.log("New GET request to get an edit page for a favorite")
+
+    res.render('favorite_edit',{
+        workid: req.params.workid
+    })
+})
