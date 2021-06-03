@@ -4,6 +4,9 @@ window.addEventListener('load',function() {
     for(var i=0; i < add_to_faves.length;i++ ) {
         add_to_faves[i].addEventListener('click',favorite)
     }
+
+    let filterbar = document.querySelector("#filterbar")
+    filterbar.addEventListener('keyup',filter)
 })
 
 //click listener for "add to favorites" button
@@ -73,4 +76,34 @@ function favorite() {
             console.log(error)
         })
     }
+}
+
+function filter() {
+    setTimeout(function(){
+        console.log(".5 second has passed")
+        let filter = document.querySelector("#filterbar").value.toUpperCase()
+        //get all list items to search if they match with the filter
+        let lists = document.querySelectorAll("ul")
+        for(var i=0; i < lists.length; i++ ) {
+            let items = lists[i].childNodes
+            let exists = false;
+            for(var j = 0; j < items.length; j++) {
+                if(items[j].tagName === 'LI') {
+                    let text = items[j].innerHTML
+                    console.log(text)
+                    if(text.toUpperCase().indexOf(filter) > -1) {
+                        console.log("AAAAAAAAAAAAAAAA")
+                        exists = true;
+                    }
+                    if(exists) {
+                        items[j].parentNode.parentNode.style.display = "";
+                    }else {
+                        items[j].parentNode.parentNode.style.display = "none";
+                    }
+                }
+                
+            }
+            
+        }
+    },500)
 }

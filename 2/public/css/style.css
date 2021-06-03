@@ -46,7 +46,7 @@ body {
 .top nav {
     margin-top: 10px;
 }
-.top a{
+.top a, input[type=submit]{
     background-color: #fcf0e4 ;
     color:#9c745a;
     border: solid 2px #5e443f;
@@ -54,7 +54,7 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-.top a:hover {
+.top a:hover , input[type=submit]:hover{
     background-color: #352825;
 }
 

@@ -19,8 +19,8 @@ templates.workDetails = Handlebars.compile(`
 
 //Add event listener when the website is loaded
 window.addEventListener('load',function() {
-    let submit_button = document.querySelector("[type=button]")
-    submit_button.addEventListener('click',fetch_url)
+    let search_form = document.querySelector(".search_form")
+    search_form.addEventListener('submit',fetch_url)
 })
 
 //fetch a list of all works given a search term
