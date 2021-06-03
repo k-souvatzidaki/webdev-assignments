@@ -49,9 +49,7 @@ app.post('/remove_favorite',function(req,res){
 app.get('/favorites',function(req,res) {
     console.log("New GET request to get a page with the favorites")
 
-    res.render('favorites_view', {
-        header1 : "Τα αγαπημένα σας έργα!",
-        header2 : "Φιλτράρισμα αγαπημένων:",
+    res.render('favorites_list', {
         favorites : dao.show()
     })
 })

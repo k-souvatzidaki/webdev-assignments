@@ -3,13 +3,16 @@ var templates = {}
 templates.workDetails = Handlebars.compile(`
 <h2>Αποτελέσματα Αναζήτησης: </h2>
 {{#each work}}
-    <section>
+    <section class="work">
         <ul>
             <li class="author">{{authorweb}}</li>
             <li class="title">{{titleweb}}</li>
             <li class="workid">{{workid}}</li>
         </ul>
-        <input type="button" class="favorite" value="+ Αγαπημένα">
+        
+        <form>
+            <input type="button" class="favorite" value="+ Αγαπημένα">
+        </form>
     </section>
 {{/each}}
 `)

@@ -1,6 +1,6 @@
 <header class="panel">
-    <h1>{{header1}}</h1>
-    <h2>{{header2}}</h2>
+    <h1>Τα αγαπημένα σας έργα!</h1>
+    <h2>Φιλτράρισμα αγαπημένων:</h2>
     <form>
         <input type="text" name="filter" id="filterbar" placeholder="πχ John Grisham">
     </form>
@@ -8,16 +8,16 @@
 
 <article>
     {{#each favorites}}
-        <section>
+        <section class="work">
             <ul>
                 <li class="author">{{author}}</li>
                 <li class="title">{{title}}</li>
                 <li class="workid">{{workid}}</li>
                 <li class="comment">Σχόλιο: {{critic}} </li>
             </ul>
-            <input type="button" class="favorite" value="- Αγαπημένα">
 
             <form>
+                <input type="button" class="favorite" value="- Αγαπημένα">
                 <button class="edit" value="Επεξεργασία" formaction="{{workid}}">Επεξεργασία</button>
             </form>
         </section>

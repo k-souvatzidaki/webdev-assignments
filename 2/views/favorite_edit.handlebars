@@ -1,8 +1,18 @@
 <header class="panel">
-    <a href="../favorites">Πίσω στα Αγαπημένα</a>
-    <h1>Επεξεργασία του έργου {{workid}} </h1>
+    <h1>Επεξεργασία του έργου με Κωδικό: {{workid}} </h1>
 </header>
 
 <article>
-    <p>hello</p>
+    <form class="info"> 
+        <label for="title">Τίτλος Έργου</label>
+        <input name="work_title" id="title" value="title">
+
+        <label for="author">Συγγραφέας Έργου</label>
+        <input name="work_author" id="author" value="author">
+
+        <label for="comment">Σχόλιο</label>
+        <input name="work_comment" id="comment" value="comment">
+
+        <input type="button" class="submit_edit" value="Αποθήκευση Αλλαγών">
+    </form>
 </article>
